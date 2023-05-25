@@ -1,0 +1,30 @@
+<nav class="navbar border-bottom navbar-expand-lg py-3 navbar-light bg-info border-danger">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img class="im" src="{{data.brandIconUrl}}" alt="image" width="40" height="40" style="border-radius: 50%;"
+                class="d-inline-block align-text-top">
+            {{!-- data data base se dynamic aa raha hai database me change kare name to karma lab change hoga or home
+            logo --}}
+            {{data.brandName}}
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                {{!-- loop lagakar ban niche kar denge repet kar rahe hai hbs ka kam hai --}}
+                {{#each data.links}}
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{this.url}}">{{this.label}}</a>
+                </li>
+
+                {{/each}}
+
+
+
+            </ul>
+        </div>
+    </div>
+</nav>

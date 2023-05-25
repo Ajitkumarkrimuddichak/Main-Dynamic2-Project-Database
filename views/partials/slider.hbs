@@ -1,0 +1,53 @@
+<!-- Carousel -->
+<div id="demo" class="carousel slide " data-bs-ride="carousel">
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+
+    {{#each slides}}
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active bg-danger"></button>
+    {{/each}}
+
+    {{!-- <button type="button" data-bs-target="#demo" data-bs-slide-to="1" class="bg-danger"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2" class="bg-black"></button> --}}
+  </div>
+
+  {{#each slides}}
+
+  <!-- Dynamic data print -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{this.imageUrl}}" alt="Los Angeles" class="d-block slider-image" style="width:100%">
+      <div class="carousel-caption d-none d-md-block">
+        <h2>{{this.title}}</h2>
+        <p>{{this.subTitle}}</p>
+      </div>
+    </div>
+    {{/each}}
+
+
+    {{!-- static data print --}}
+    {{!-- <div class="carousel-item">
+      <img src="/static/images/20191209_222411.jpg" alt="Chicago" class="d-block slider-image" style="width:100%">
+      <div class="carousel-caption">
+        <h2>Welcome to My Website</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa tempora error assumenda nemo in harum!!</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="/static/images/DSC_0016.JPG" alt="New York" class="d-block slider-image" style="width:100%">
+      <div class="carousel-caption">
+        <h2>Welcome to My Website</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa tempora error assumenda nemo in harum!!</p>
+      </div>
+    </div> --}}
+
+
+  </div>
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon bg-black"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon bg-black"></span>
+  </button>
+</div>
